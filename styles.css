@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+
+    background: #333;
+}
+
+#pingpong {
+    width: 800px;
+    height: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+
+    border-radius: 20px;
+}
