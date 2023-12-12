@@ -67,9 +67,9 @@ function handleCollisionPaddleBall(paddle, ball, isAI = false) {
     const paddleTopEdge = paddle.position.y;
     const paddleBottomEdge = paddle.position.y + paddle.sizes.height;
 
-    const ballIsSameX = isAI ? ball.position.x + ball.radius === paddleLeftEdge : ball.position.x - ball.radius === paddleRightEdge;
+    const ballIsSameX = isAI ? ball.position.x + ball.radius >= paddleLeftEdge : ball.position.x - ball.radius <= paddleRightEdge;
     const ballIsSameY = ball.position.y + ball.radius >= paddleTopEdge && ball.position.y - ball.radius <= paddleBottomEdge;
-
+    
     if (ballIsSameX && ballIsSameY) {
         changeDirection(ball.velocity, 'x');
     }

@@ -4,10 +4,18 @@ const ball = {
         y: canvas.height / 2,
     },
     velocity: {
-        x: 2,
-        y: 2,
+        x: 4,
+        y: 4,
     },
     radius: 10,
+}
+
+function randomBallVelocity(ball) {
+    const velocityY = numeroAleatorioPositivoOuNegativo() * (Math.random() * 2 + 2);
+    const velocityX = numeroAleatorioPositivoOuNegativo() * (Math.random() * 2 + 2);
+
+    ball.velocity.x = velocityX;
+    ball.velocity.y = velocityY;
 }
 
 function renderBall(ball) {

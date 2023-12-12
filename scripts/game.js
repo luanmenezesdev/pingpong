@@ -24,4 +24,14 @@ function update() {
     requestAnimationFrame(update);
 }
 
-update();
+function adjustScreenStyle() {
+    const overlay = document.querySelector('.overlay');
+
+    overlay.classList.add('ongame');
+}
+
+function startGame() {
+    randomBallVelocity(ball);
+    adjustScreenStyle();
+    update();
+}
